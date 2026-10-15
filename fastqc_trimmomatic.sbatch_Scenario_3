@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=fastqc_trimmomatic.sbatch
+#SBATCH --output=/home/qo8/z01_output/z01.%x_%j
+#SBATCH --mail-type=END,FAIL --mail-user=qo8@georgetown.edu
+#SBATCH --nodes=1 --ntasks=1 --cpus-per-task=1 --time=72:00:00
+#SBATCH --mem=4G
+#SBATCH --error=/home/qo8/trim_error/error.%x_%j
+#---------------------set environment, load module-------------#
+shopt -s expand_aliases
+module load trimmomatic/0.39
+#--------------------run trimmomatic----------------------#
+trimmomatic PE \
+EC-12_R1_001.fastq.gz \
+EC-12_R2_001.fastq.gz \
+output_R1_pairedend.fq${SLURM_JOB_ID}.gz output_R1_singleend.fq${SLURM_JOB_ID}.gz \
+output_R2_pairedend.fq.${SLURM_JOB_ID}.gz output_R2_singleend.fq.${SLURM_JOB_ID}.gz \
+LEADING:10 \
+TRAILING:10 \
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 \
+SLIDINGWINDOW:4:15 \
+MINLEN:75
+#----------------------unload module-----------------#
+module unload trimmomatic/0.39
+#---------------------end job-----------------------#
