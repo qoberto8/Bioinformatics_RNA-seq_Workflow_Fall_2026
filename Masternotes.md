@@ -8,3 +8,6 @@ A1/B1/C1 all represent data from replicates/isolates grown in (Thi+) and A2/B2/C
 _1 & _2 are read pairs.
 
 Files with which I'll be working: WTC1_1.fq.gz, WTC1_2.fq.gz, WTC2_1.fq.gz, WTC2_2.fq.gz
+
+Files were analyzed by FastQC Report and cleaned using trimmomatic.
+These cleaned files were then analyzed again via FastQC report.
