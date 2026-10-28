@@ -10,11 +10,11 @@ shopt -s expand_aliases
 module load trimmomatic/0.39
 
 #-Input files-#
-loc_in1="/home/qo8/RNAseq/WTC1_1.fq"
-loc_in2="/home/qo8/RNAseq/WTC1_2.fq"
+loc_in1="/home/qo8/RNAseq/input_files/WTC1_1.fq"
+loc_in2="/home/qo8/RNAseq/input_files/WTC1_2.fq"
 
 #-Output files-#
-loc_out="/home/qo8/RNAseq/trimmed_RNAseq${SLURM_JOB_ID}"
+loc_out="/home/qo8/RNAseq/trim_out/WTC1_trimmed_out"
 mkdir -p $loc_out
 out1_paired="$loc_out/WTC1_1_paired.fq"
 out1_unpaired="$loc_out/WTC1_1_unpaired.fq"
