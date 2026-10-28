@@ -10,8 +10,8 @@
 #-#
 module load fastqc/0.12.0 
 
-loc_input="/home/qo8/RNAseq/WTC1_1.fq"
-loc_output="/home/qo8/RNAseq/fastqc_out${SLURM_JOB_ID}"
+loc_input="/home/qo8/RNAseq/input_files/WTC1_1.fq"
+loc_output="/home/qo8/RNAseq/fastqc_out/WTC1_1_fastqc_out"
 
 mkdir -p $loc_output
 fastqc $loc_input -o $loc_output
