@@ -22,7 +22,7 @@ out2_paired="$loc_out/WTC1_2_paired.fq"
 out2_unpaired="$loc_out/WTC1_2_unpaired.fq"
 
 #-Adapter file-#
-loc_adapters="/home/qo8/SBATCH/TruSeq3-PE.fa"
+loc_adapters="/home/qo8/Illumina_adapter_file/TruSeq3-PE.fa"
 
 #-run trimmomatic-#
 trimmomatic PE \
