@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=bedtools_getfasta
+#SBATCH --job-name=RNAseq_bowtie2_WTC2
 #SBATCH --output=/home/qo8/z01_output/z01.%x_%j
 #SBATCH --mail-type=END,FAIL --mail-user=qo8@georgetown.edu
 #SBATCH --nodes=1 --ntasks=1 --cpus-per-task=4 --time=72:00:00
