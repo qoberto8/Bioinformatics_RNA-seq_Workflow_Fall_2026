@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=fastqc_trimmomatic.sbatch
+#SBATCH --job-name=WTC2_1_paired_fastqc
 #SBATCH --output=/home/qo8/z01_output/z01.%x_%j
 #SBATCH --mail-type=END,FAIL --mail-user=qo8@georgetown.edu
 #SBATCH --nodes=1 --ntasks=1 --cpus-per-task=1 --time=72:00:00
