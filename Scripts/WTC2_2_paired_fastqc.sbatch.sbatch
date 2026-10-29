@@ -10,7 +10,7 @@
 #-#
 module load fastqc/0.12.0 
 
-loc_input="/home/qo8/RNAseq/trim_out/WTC2_trimmed/WTC2_2_paired.fq"
+loc_input="/home/qo8/RNAseq/trim_out/WTC2_trimmed_out/WTC2_2_paired.fq"
 loc_output="/home/qo8/RNAseq/fastqc_out/WTC2_2_paired_fastqc_out"
 
 mkdir -p $loc_output
