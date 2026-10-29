@@ -30,10 +30,10 @@ $loc_in1 \
 $loc_in2 \
 $out1_paired $out1_unpaired \
 $out2_paired $out2_unpaired \
-ILLUMINACLIP:$loc_adapters:2:30:10 \
-SLIDINGWINDOW:4:15 \
 HEADCROP:17 \
 TRAILING:15 \
+ILLUMINACLIP:$loc_adapters:2:30:10 \
+SLIDINGWINDOW:4:15 \
 MINLEN:75
 #----------------------unload module-----------------#
 module unload trimmomatic/0.39
