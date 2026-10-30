@@ -9,7 +9,7 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
 ### Workflow
  <br>
  
-1. Files (WTC1_1.fq, WTC1_2.fq, WTC2_1.fq, WTC2_2.fq) were analyzed by FastQC Report and cleaned accordingly using trimmomatic (removing sporadic base calling in the first ~17 bp of reads and removing adapter contamination).
+1. Files (WTC1_1.fq, WTC1_2.fq, WTC2_1.fq, WTC2_2.fq) were analyzed by FastQC Report and cleaned accordingly using trimmomatic (removing sporadic base calling in the first ~17 bp of reads and adapter contamination, sequence duplication levels were deemed unproblematic at the levels reported and ignored).
    
   a. Scripts used to generate the FastQC Report .html files:
 
@@ -22,25 +22,35 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
  <br>
   b. FastQC Report .html files:<br>
   
-  [WTC1_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_1_fastqc (1).html)<br>
-  [WTC1_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_2_fastqc (1).html)<br>
-  [WTC2_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_1_fastqc (1).html)<br>
-  [WTC2_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_2_fastqc (1).html)<br>
+  [WTC1_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_1_fastqc.html)<br>
+  [WTC1_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_2_fastqc.html)<br>
+  [WTC2_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_1_fastqc.html)<br>
+  [WTC2_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_2_fastqc.html)<br>
   <br>
+  c. Trimmomatic scripts: <br>
+  
+[WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
+[WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
+ <br>
  _
  <br>
  <br>
 
-2. Cleaned files were then analyzed again via FastQC Report and their effectiveness assessed.
+2. Cleaned files were then analyzed again via FastQC Report and their effectiveness assessed. After analysis, trimmomatic results were deemed sufficient to proceed with workflow (minor adapter contamination remained, sequence duplication levels were deemed unproblematic at the levels reported and ignored).
 
-  a. Scripts used for this process are:
+  a. Scripts used to generate the FastQC Report .html files:
 
 [WTC1_1 Paired Trimmomatic Output Script](Scripts/WTC1_1_paired_fastqc.sbatch)<br>
 [WTC1_2 Paired Trimmomatic Output Script](Scripts/WTC1_2_paired_fastqc.sbatch)<br>
 [WTC2_1 Paired Trimmomatic Output Script](Scripts/WTC2_1_paired_fastqc.sbatch)<br>
 [WTC2_2 Paired Trimmomatic Output Script](Scripts/WTC2_2_paired_fastqc.sbatch)
 
-  b. Trimmomatic results analyzed in FastQC Report deemed accurate and proceeded with workflow (minor adapter contamination remained).<br>
+  b. FastQC Report .html files: <br>
+
+[WTC1_1 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC1_1_paired_fastqc.html)<br>
+[WTC1_2 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC1_2_paired_fastqc.html)<br>
+[WTC2_1 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC2_1_paired_fastqc.html)<br>
+[WTC2_2 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC2_2_paired_fastqc.html)<br>
  <br>
 _
  <br>
@@ -48,7 +58,7 @@ _
  
 3. Aligned reads to C. albicans reference genome assembly ASM18296v3 from NCBI (fasta file GCF_000182965.3_ASM18296v3_genomic.fna) using bowtie2/2.5.4 and samtools/1.24
 
-  a. First, we built an index to run the alignment using UNIX command:
+  a. First, we built an index to run the alignment using this UNIX command on the Georgetown University HPC cluster:
   
 qo8@m12-base1-4 $ bowtie2-build GCF_000182965.3_ASM18296v3_genomic.fna C_alb
 
