@@ -47,8 +47,8 @@ qo8@m12-base1-4 $ bowtie2-build GCF_000182965.3_ASM18296v3_genomic.fna C_alb
 
   b. After index construction, trimmed reads were aligned and put into SAM format using the scripts below:
   
-[WTC1 Alignment Script](RNAseq_bowtie2_WTC1.sbatch)<br>
-[WTC2 Alignment Script](RNAseq_bowtie2_WTC2.sbatch)<br>
+[WTC1 Alignment Script](Scripts/RNAseq_bowtie2_WTC1.sbatch)<br>
+[WTC2 Alignment Script](Scripts/RNAseq_bowtie2_WTC2.sbatch)<br>
  <br>
 _
  <br>
