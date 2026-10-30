@@ -11,15 +11,22 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
  
 1. Files (WTC1_1.fq, WTC1_2.fq, WTC2_1.fq, WTC2_2.fq) were analyzed by FastQC Report and cleaned accordingly using trimmomatic (removing sporadic base calling in the first ~17 bp of reads and removing adapter contamination).
    
-  a. Scripts used to generate these timmed fastq files are:
+  a. Scripts used to generate the FastQC Report .html files:
 
-[WTC1_1 FastQC Script](Scripts/WTC1_1_fastqc.sbatch)<br>
-[WTC1_2 FastQC Script](Scripts/WTC1_2_fastqc.sbatch)<br>
-[WTC2_1 FastQC Script](Scripts/WTC2_1_fastqc.sbatch)<br>
-[WTC2_2 FastQC Script](Scripts/WTC2_2_fastqc.sbatch)<br>
-[WTC1 Trimmomatic Script](Scripts/WTC1_trim.sbatch)<br>
-[WTC2 Trimmomatic Script](Scripts/WTC2_trim.sbatch)<br>
+[WTC1_1 FastQC Script](Scripts/FastQC/WTC1_1_fastqc.sbatch)<br>
+[WTC1_2 FastQC Script](Scripts/FastQC/WTC1_2_fastqc.sbatch)<br>
+[WTC2_1 FastQC Script](Scripts/FastQC/WTC2_1_fastqc.sbatch)<br>
+[WTC2_2 FastQC Script](Scripts/FastQC/WTC2_2_fastqc.sbatch)<br>
+[WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
+[WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
  <br>
+  b. FastQC Report .html files:<br>
+  
+  [WTC1_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_1_fastqc (1).html)<br>
+  [WTC1_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_2_fastqc (1).html)<br>
+  [WTC2_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_1_fastqc (1).html)<br>
+  [WTC2_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_2_fastqc (1).html)<br>
+  <br>
  _
  <br>
  <br>
