@@ -22,10 +22,10 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
  <br>
   b. FastQC Report .html files:<br>
   
-  [WTC1_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_1_fastqc.html)<br>
-  [WTC1_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC1_2_fastqc.html)<br>
-  [WTC2_1 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_1_fastqc.html)<br>
-  [WTC2_2 FastQC Report](Scripts/Files/Input_File_FastQC/WTC2_2_fastqc.html)<br>
+  [WTC1_1 FastQC Report](Files/Files/Input_File_FastQC/WTC1_1_fastqc.html)<br>
+  [WTC1_2 FastQC Report](Files/Files/Input_File_FastQC/WTC1_2_fastqc.html)<br>
+  [WTC2_1 FastQC Report](Files/Files/Input_File_FastQC/WTC2_1_fastqc.html)<br>
+  [WTC2_2 FastQC Report](Files/Files/Input_File_FastQC/WTC2_2_fastqc.html)<br>
   <br>
   c. Trimmomatic scripts: <br>
   
@@ -47,10 +47,10 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
 
   b. FastQC Report .html files: <br>
 
-[WTC1_1 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC1_1_paired_fastqc.html)<br>
-[WTC1_2 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC1_2_paired_fastqc.html)<br>
-[WTC2_1 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC2_1_paired_fastqc.html)<br>
-[WTC2_2 Trimmed FastQC Report](Scripts/Files/Trimmed_FastQC/WTC2_2_paired_fastqc.html)<br>
+[WTC1_1 Trimmed FastQC Report](Files/Files/Trimmed_FastQC/WTC1_1_paired_fastqc.html)<br>
+[WTC1_2 Trimmed FastQC Report](Files/Files/Trimmed_FastQC/WTC1_2_paired_fastqc.html)<br>
+[WTC2_1 Trimmed FastQC Report](Files/Files/Trimmed_FastQC/WTC2_1_paired_fastqc.html)<br>
+[WTC2_2 Trimmed FastQC Report](Files/Files/Trimmed_FastQC/WTC2_2_paired_fastqc.html)<br>
  <br>
 _
  <br>
