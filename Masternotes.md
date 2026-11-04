@@ -1,11 +1,12 @@
-## Description of Project Experimental Design
+## Description of Project Experimental Design/Workflow
 We are working with data obtained from Candida albicans (commensal yeast) grown in thiamine deplete (Thi-) and replete (Thi+) conditions to induce stress/virulence. 
 
 - This is paired end data obtained from biological triplicates A, B and C.
 - A1/B1/C1 all represent data from replicates/isolates grown in (Thi+) and A2/B2/C2 represent data from replicates/isolates grown in (Thi-).
 - _1 & _2 are read pairs.
 - Files with which I'll be working: WTC1_1.fq, WTC1_2.fq, WTC2_1.fq, WTC2_2.fq
-
+ <br>
+ 
 ### Workflow
  <br>
  
@@ -30,7 +31,10 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
   c. Trimmomatic scripts: <br>
   
 [WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
+ *% reads lost cleaning = 3.54% for WTC2_1.fq and 5.05% for WTC2_2.fq<br>
+ 
 [WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
+ *% reads lost cleaning = 3.03% for WTC1_1.fq and WTC1_2.fq<br>
 
  b. These scripts generated files:<br>
  
@@ -117,14 +121,17 @@ qo8@m12-base1-4 $ samtools sort WTC2.bam -o WTC2.srt.bam<br>
   d. Files generated from these commands:<br>
 
 WTC1.srt.bam<br>
+ *Concordant alignment rate (exactly one time) = 89.01%<br>
+ 
 WTC2.srt.bam<br>
+ *Concordant alignment rate (exactly one time) = 89.41%<br>
 
   e. UNIX commands used for the indexing of BAM files:<br>
 
 qo8@m12-base1-4 $ samtools index WTC1.srt.bam<br>
 qo8@m12-base1-4 $ samtools index WTC2.srt.bam<br>
  <br>
- *Additionally these steps can be included in and written into the scripts used to generate the SAM files without going through this intermediate.
+ *This SAM to BAM conversion can also be included in and written into the scripts used to generate the SAM files without going through the intermediate UNIX commands described in this step of the workflow.
  <br>
 _
  <br>
