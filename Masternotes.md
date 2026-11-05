@@ -58,8 +58,13 @@ Before HEADCROP:<br>
 ![Per-base Sequence Content Before Trimming](Images/Headcrop_example.jpg)<br>
 After HEADCROP<br>
 ![Per-base Sequence Content Before Trimming](Images/Headcrop_example2.jpg)<br>
-* TRAILING:15 - Removes bases from the 3' end of a read while their quality score is below 15, stopping at the first base at or above the threshold; bases between positions 17 and 135 were acceptable and did not require trimming with this command.<br>
-* ILLUMINACLIP:$loc_adapters:2:30:10 - Trims Illumina adapter sequence from reads, using the adapter sequences in TruSeq3-PE.fa. The numbers set the seed mismatch allowance (2), the palindrome clip threshold for paired-end adapter read-through (30), and the simple clip threshold (10).<br>
+* TRAILING:15 - Removes bases from the 3' end of a read while their quality score is below 15, stopping at the first base at or above the threshold; quality of base calls before position 135 were acceptable and did not require trimming with this command.<br>
+ex.<br>
+Before TRAILING:<br>
+![Per-base Sequence Content Before Trimming](Images/Headcrop_example2.jpg)<br>
+After TRAILING:<br>
+![Per-base Sequence Content Before Trimming](Images/Headcrop_example2.jpg)<br>
+* ILLUMINACLIP:$loc_adapters:2:30:10 - Trims Illumina adapter sequence from reads, using the adapter sequences in TruSeq3-PE.fa. The numbers set the seed mismatch allowance (2), the palindrome clip threshold for paired-end adapter read-through (30), and the simple clip threshold (10). Should resolve any adapter content.<br>
 * SLIDINGWINDOW:4:15 - Scans along the read with a sliding window, cutting the read once the average quality within the window falls below a threshold; 4 is the window size in bases and 15 is the quality threshold.<br>
 * MINLEN:75 - Discards a read entirely if it is shorter than 75 bases after all other trimming steps have been applied.<br>
 * ORDER OF COMMANDS MATTERS! Trimmomatic applies steps in the order given. MINLEN should come last, so that length filtering is applied to the final trimmed read.<br>
