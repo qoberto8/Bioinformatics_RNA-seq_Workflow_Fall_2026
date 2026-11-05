@@ -52,10 +52,12 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
  <br>
  
   e. Options used and rationale:<br>
-* HEADCROP:17 - Removes the first 17 bases of every read, as per-base sequence content was uneven up to roughly this position.
-ex.
-![Per-base Sequence Content Before Trimming](Images/Headcrop_example.jpg)
-
+* HEADCROP:17 - Removes the first 17 bases of every read, as per-base sequence content was uneven up to roughly this position.<br>
+ex.<br>
+Before HEADCROP:<br>
+![Per-base Sequence Content Before Trimming](Images/Headcrop_example.jpg)<br>
+After HEADCROP<br>
+![Per-base Sequence Content Before Trimming](Images/Headcrop_example.jpg)<br>
 * TRAILING:15 - Removes bases from the 3' end of a read while their quality score is below 15, stopping at the first base at or above the threshold; bases between positions 17 and 135 were acceptable and did not require trimming with this command.<br>
 * ILLUMINACLIP:$loc_adapters:2:30:10 - Trims Illumina adapter sequence from reads, using the adapter sequences in TruSeq3-PE.fa. The numbers set the seed mismatch allowance (2), the palindrome clip threshold for paired-end adapter read-through (30), and the simple clip threshold (10).<br>
 * SLIDINGWINDOW:4:15 - Scans along the read with a sliding window, cutting the read once the average quality within the window falls below a threshold; 4 is the window size in bases and 15 is the quality threshold.<br>
