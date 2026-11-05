@@ -31,10 +31,10 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
   c. Trimmomatic scripts: <br>
   
 [WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
- *% reads lost cleaning = 3.54% for WTC2_1.fq and 5.05% for WTC2_2.fq<br>
+ *% reads lost cleaning = 3.03% for WTC1_1.fq and WTC1_2.fq<br>
  
 [WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
- *% reads lost cleaning = 3.03% for WTC1_1.fq and WTC1_2.fq<br>
+ *% reads lost cleaning = 3.54% for WTC2_1.fq and 5.05% for WTC2_2.fq<br>
 
  b. These scripts generated files:<br>
  
