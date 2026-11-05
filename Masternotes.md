@@ -137,9 +137,40 @@ _
  <br>
  <br>
 
- 
+5. Sorted BAM files were used to generate per-gene read counts using htseq-count (HTSeq) run from a conda environment. Counts were made against the C. albicans annotation file GCF_000182965.3_ASM18296v3_genomic.gtf from NCBI (same assembly used for the bowtie2 index in step 3).
 
+  a. Scripts used to generate count files:
+[WTC1 htseq-count Script]()
+[WTC2 htseq-count Script]()
 
-  
+  b. Options used and rationale:
+* -r pos: input BAM files are position-sorted (see step 4c)
+* -s no: data is not from a strand-specific protocol; the htseq-count default (-s yes) would discard roughly half of all reads
+* -t exon: counts reads overlapping features labeled "exon" in column 3 of the GTF
+* -i gene_id: groups exons belonging to the same gene using the gene_id attribute, so counts are reported per gene
 
+  c. Scripts generated files:<br>
+
+WTC1_htseq-count<br>
+WTC2_htseq-count<br>
+
+  d. Summary of counting results:<br>
+
+* WTC1_htseq-count<br>
+20123585 alignment record pairs processed<br>
+__no_feature	325790<br>
+__ambiguous	269578<br>
+__too_low_aQual	1245864<br>
+__not_aligned	253960<br>
+__alignment_not_unique	0<br>
+
+* WTC2_htseq-count<br>
+19684786 alignment record pairs processed<br>
+__no_feature	357846<br>
+__ambiguous	267917<br>
+__too_low_aQual	1206192
+__not_aligned	304125<br>
+__alignment_not_unique	0<br>
+
+e. Output format: each file is a two-column table of gene ID and read-pair count, followed by the five special counters listed above. These count tables are the input for differential expression analysis between the Thi+ (WTC1) and Thi- (WTC2) conditions.
 
