@@ -20,6 +20,7 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
 - [WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
 - [WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
  <br>
+ 
   b. FastQC Report .html files:<br>
   
   [WTC1_1 FastQC Report](Files/Input_File_FastQC/WTC1_1_fastqc.html)<br>
@@ -27,6 +28,7 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
   [WTC2_1 FastQC Report](Files/Input_File_FastQC/WTC2_1_fastqc.html)<br>
   [WTC2_2 FastQC Report](Files/Input_File_FastQC/WTC2_2_fastqc.html)<br>
   <br>
+  
   c. Trimmomatic scripts: <br>
   
 * [WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
@@ -34,6 +36,7 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
  
 * [WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
 * % reads lost cleaning = 3.54% for WTC2_1.fq and 5.05% for WTC2_2.fq<br>
+ <br>
 
   d. These scripts generated files:<br>
  
@@ -47,12 +50,13 @@ We are working with data obtained from Candida albicans (commensal yeast) grown 
 - WTC2_2_paired.fq<br>
 - WTC2_2_unpaired.fq<br>
  <br>
+ 
   e. Options used and rationale:<br>
-* HEADCROP:17 - Removes the first 17 bases of every read, as per-base sequence content was uneven up to roughly this position.<br>
+* HEADCROP:17 - Removes the first 17 bases of every read, as per-base sequence content was uneven up to roughly this position.
+ex.
+![Per-base Sequence Content Before Trimming](Images/Headcrop_example.jpg)
 
 * TRAILING:15 - Removes bases from the 3' end of a read while their quality score is below 15, stopping at the first base at or above the threshold; bases between positions 17 and 135 were acceptable and did not require trimming with this command.<br>
-ex.
-<picture>
 * ILLUMINACLIP:$loc_adapters:2:30:10 - Trims Illumina adapter sequence from reads, using the adapter sequences in TruSeq3-PE.fa. The numbers set the seed mismatch allowance (2), the palindrome clip threshold for paired-end adapter read-through (30), and the simple clip threshold (10).<br>
 * SLIDINGWINDOW:4:15 - Scans along the read with a sliding window, cutting the read once the average quality within the window falls below a threshold; 4 is the window size in bases and 15 is the quality threshold.<br>
 * MINLEN:75 - Discards a read entirely if it is shorter than 75 bases after all other trimming steps have been applied.<br>
