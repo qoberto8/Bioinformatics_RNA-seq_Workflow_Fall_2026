@@ -84,6 +84,7 @@ After TRAILING:<br>
 - [WTC1_2 Paired Trimmomatic Output Script](Scripts/WTC1_2_paired_fastqc.sbatch)<br>
 - [WTC2_1 Paired Trimmomatic Output Script](Scripts/WTC2_1_paired_fastqc.sbatch)<br>
 - [WTC2_2 Paired Trimmomatic Output Script](Scripts/WTC2_2_paired_fastqc.sbatch)<br>
+ <br>
 
   b. FastQC Report .html files: <br>
 
@@ -101,6 +102,7 @@ _
   a. First, we built an index to run the alignment using this UNIX command on the Georgetown University HPC cluster:
   
 qo8@m12-base1-4 $ bowtie2-build GCF_000182965.3_ASM18296v3_genomic.fna C_alb
+ <br>
 
   b. Index files generated:<br>
   
@@ -110,12 +112,14 @@ qo8@m12-base1-4 $ bowtie2-build GCF_000182965.3_ASM18296v3_genomic.fna C_alb
 - C_alb.4.bt2<br>
 - C_alb.rev.1.bt2<br>
 - C_alb.rev.2.bt2<br>
+ <br>
 
   c. After index construction, trimmed reads were aligned and put into SAM format using the scripts below:<br>
   
 - [WTC1 Alignment Script](Scripts/RNAseq_bowtie2_WTC1.sbatch)<br>
 - [WTC2 Alignment Script](Scripts/RNAseq_bowtie2_WTC2.sbatch)<br>
  <br>
+ 
   d. Scripts generated files:<br>
   
 - WTC1.sam<br>
@@ -131,30 +135,37 @@ _
 
 - qo8@m12-base1-4 $ samtools view -S -b WTC1.sam > WTC1.bam<br>
 - qo8@m12-base1-4 $ samtools view -S -b WTC2.sam > WTC2.bam<br>
+ <br>
 
   b. Files generated from these commands:<br>
 
 - WTC1.bam<br>
 - WTC2.bam<br>
+ <br>
 
   c. UNIX commands used for the sorting of BAM files:<br>
 
 - qo8@m12-base1-4 $ samtools sort WTC1.bam -o WTC1.srt.bam<br>
 - qo8@m12-base1-4 $ samtools sort WTC2.bam -o WTC2.srt.bam<br>
+ <br>
 
   d. Files generated from these commands:<br>
+ <br>
 
 WTC1.srt.bam<br>
 * Concordant alignment rate (exactly one time) = 89.01%<br>
+ <br>
  
 WTC2.srt.bam<br>
 * Concordant alignment rate (exactly one time) = 89.41%<br>
-
+ <br>
+ 
   e. UNIX commands used for the indexing of BAM files:<br>
+ <br>
 
 - qo8@m12-base1-4 $ samtools index WTC1.srt.bam<br>
 - qo8@m12-base1-4 $ samtools index WTC2.srt.bam<br>
- <br>
+<br>
 * This SAM to BAM conversion can also be included in and written into the scripts used to generate the SAM files without going through the intermediate UNIX commands described in this step of the workflow.
  <br>
 _
@@ -164,19 +175,22 @@ _
 5. Sorted BAM files were used to generate per-gene read counts using htseq-count (HTSeq) run from a conda environment. Counts were made against the C. albicans annotation file GCF_000182965.3_ASM18296v3_genomic.gtf from NCBI (same assembly used for the bowtie2 index in step 3).
 
   a. Scripts used to generate count files:
-[WTC1 htseq-count Script](Scripts/htseq/WTC1_htseq-count.sbatch)
-[WTC2 htseq-count Script](Scripts/htseq/WTC1_htseq-count.sbatch)
+[WTC1 htseq-count Script](Scripts/htseq/WTC1_htseq-count.sbatch)<br>
+[WTC2 htseq-count Script](Scripts/htseq/WTC1_htseq-count.sbatch)<br>
+ <br>
 
   b. Options used and rationale:
 * -r pos: input BAM files are position-sorted (see step 4c)
 * -s no: data is not from a strand-specific protocol; the htseq-count default (-s yes) would discard roughly half of all reads
 * -t exon: counts reads overlapping features labeled "exon" in column 3 of the GTF
 * -i gene_id: groups exons belonging to the same gene using the gene_id attribute, so counts are reported per gene
+ <br>
 
   c. Scripts generated files:<br>
 
 - WTC1_htseq-count<br>
 - WTC2_htseq-count<br>
+ <br>
 
   d. Summary of counting results:<br>
 
@@ -187,6 +201,7 @@ WTC1_htseq-count<br>
 - __too_low_aQual	1245864<br>
 - __not_aligned	253960<br>
 - __alignment_not_unique	0<br>
+ <br>
 
 WTC2_htseq-count<br>
 - 19684786 alignment record pairs processed<br>
@@ -195,6 +210,7 @@ WTC2_htseq-count<br>
 - __too_low_aQual	1206192
 - __not_aligned	304125<br>
 - __alignment_not_unique	0<br>
+ <br>
 
 e. Output format: each file is a two-column table of gene ID and read-pair count, followed by the five special counters listed above. These count tables are the input for differential expression analysis between the Thi+ (WTC1) and Thi- (WTC2) conditions.<br>
 
