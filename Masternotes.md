@@ -188,8 +188,8 @@ _
 
   c. Scripts generated files:<br>
 
-- WTC1_htseq-count<br>
-- WTC2_htseq-count<br>
+- WTC1.htseq<br>
+- WTC2.htseq<br>
  <br>
 
   d. Summary of counting results:<br>
