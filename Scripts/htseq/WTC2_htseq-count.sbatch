@@ -18,7 +18,7 @@ loc_bam="/home/qo8/RNAseq/bam_files/WTC2.bam"
 loc_gtf="/home/qo8/RNAseq/ref_genome_files/GCF_000182965.3_ASM18296v3_genomic.gtf"
 
 #-Run htseq-count-#
-${htseq} -f bam -r pos -s no -t exon -i gene_id ${loc_bam} ${loc_gtf} > /home/qo8/RNAseq/htseq-count_files/WTC2_htseq-count
+${htseq} -f bam -r pos -s no -t exon -i gene_id ${loc_bam} ${loc_gtf} > /home/qo8/RNAseq/htseq-count_files/WTC2.htseq
 
 #-deactivate htseq environment-#
 source deactivate
