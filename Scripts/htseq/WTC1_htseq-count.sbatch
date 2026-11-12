@@ -15,7 +15,7 @@ source activate htseq
 
 #-set variables-#
 htseq="/home/qo8/.conda/envs/htseq/bin/htseq-count"
-loc_bam="/home/qo8/RNAseq/bam_files/WTC1.bam"
+loc_bam="/home/qo8/RNAseq/bam_files/WTC1.srt.bam"
 loc_gtf="/home/qo8/RNAseq/ref_genome_files/GCF_000182965.3_ASM18296v3_genomic.gtf"
 
 #-Run htseq-count-#
