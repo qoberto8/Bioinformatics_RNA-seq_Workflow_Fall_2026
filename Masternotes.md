@@ -16,8 +16,6 @@ _
 - [WTC1_2 FastQC Script](Scripts/FastQC/WTC1_2_fastqc.sbatch)<br>
 - [WTC2_1 FastQC Script](Scripts/FastQC/WTC2_1_fastqc.sbatch)<br>
 - [WTC2_2 FastQC Script](Scripts/FastQC/WTC2_2_fastqc.sbatch)<br>
-- [WTC1 Trimmomatic Script](Scripts/Trimmomatic/WTC1_trim.sbatch)<br>
-- [WTC2 Trimmomatic Script](Scripts/Trimmomatic/WTC2_trim.sbatch)<br>
  <br>
  
   b. FastQC Report .html files:<br>
