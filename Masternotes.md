@@ -20,10 +20,10 @@ _
  
   b. FastQC Report files (.pdf format):<br>
   
-- [WTC1_1 FastQC Report](Files/Input_FastQC/WTC1_1.fq FastQC Report.pdf)<br>
-- [WTC1_2 FastQC Report](Files/Input_FastQC/WTC1_2.fq FastQC Report.pdf)<br>
-- [WTC2_1 FastQC Report](Files/Input_FastQC/WTC2_1.fq FastQC Report.pdf)<br>
-- [WTC2_2 FastQC Report](Files/Input_FastQC/WTC2_2.fq FastQC Report.pdf)<br>
+- [WTC1_1 FastQC Report](Files/Input_FastQC/WTC1_1_FastQC_Report.pdf)<br>
+- [WTC1_2 FastQC Report](Files/Input_FastQC/WTC1_2_FastQC_Report.pdf)<br>
+- [WTC2_1 FastQC Report](Files/Input_FastQC/WTC2_1_FastQC_Report.pdf)<br>
+- [WTC2_2 FastQC Report](Files/Input_FastQC/WTC2_2_FastQC_Report.pdf)<br>
   <br>
   
   c. Trimmomatic scripts: <br>
