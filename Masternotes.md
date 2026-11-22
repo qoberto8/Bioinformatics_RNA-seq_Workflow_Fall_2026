@@ -78,10 +78,10 @@ After TRAILING:<br>
 
   a. Scripts used to generate the FastQC Report .html files:
 
-- [WTC1_1 Paired Trimmomatic Output Script](Scripts/WTC1_1_paired_fastqc.sbatch)<br>
-- [WTC1_2 Paired Trimmomatic Output Script](Scripts/WTC1_2_paired_fastqc.sbatch)<br>
-- [WTC2_1 Paired Trimmomatic Output Script](Scripts/WTC2_1_paired_fastqc.sbatch)<br>
-- [WTC2_2 Paired Trimmomatic Output Script](Scripts/WTC2_2_paired_fastqc.sbatch)<br>
+- [WTC1_1 Paired Trimmomatic Output Script](Scripts/FastQC/WTC1_1_paired_fastqc.sbatch)<br>
+- [WTC1_2 Paired Trimmomatic Output Script](Scripts/FastQC/WTC1_2_paired_fastqc.sbatch)<br>
+- [WTC2_1 Paired Trimmomatic Output Script](Scripts/FastQC/WTC2_1_paired_fastqc.sbatch)<br>
+- [WTC2_2 Paired Trimmomatic Output Script](Scripts/FastQC/WTC2_2_paired_fastqc.sbatch)<br>
  <br>
 
   b. FastQC Report .html files: <br>
