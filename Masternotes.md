@@ -84,12 +84,12 @@ After TRAILING:<br>
 - [WTC2_2 Paired Trimmomatic Output Script](Scripts/FastQC/WTC2_2_paired_fastqc.sbatch)<br>
  <br>
 
-  b. FastQC Report .html files: <br>
+  b. FastQC Report files (.pdf format): <br>
 
-- [WTC1_1 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC1_1_paired_fastqc.html)<br>
-- [WTC1_2 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC1_2_paired_fastqc.html)<br>
-- [WTC2_1 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC2_1_paired_fastqc.html)<br>
-- [WTC2_2 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC2_2_paired_fastqc.html)<br>
+- [WTC1_1 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC1_1_paired_FastQC_Report.pdf)<br>
+- [WTC1_2 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC1_2_paired_FastQC_Report.pdf)<br>
+- [WTC2_1 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC2_1_paired_FastQC_Report.pdf)<br>
+- [WTC2_2 Trimmed FastQC Report](Files/Trimmed_FastQC/WTC2_2_paired_FastQC_Report.pdf)<br>
  <br>
 _
  <br>
