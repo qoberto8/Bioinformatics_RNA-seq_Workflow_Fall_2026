@@ -18,12 +18,12 @@ _
 - [WTC2_2 FastQC Script](Scripts/FastQC/WTC2_2_fastqc.sbatch)<br>
  <br>
  
-  b. FastQC Report .html files:<br>
+  b. FastQC Report files (.pdf format):<br>
   
-- [WTC1_1 FastQC Report](Files/Input_File_FastQC/WTC1_1_fastqc.html)<br>
-- [WTC1_2 FastQC Report](Files/Input_File_FastQC/WTC1_2_fastqc.html)<br>
-- [WTC2_1 FastQC Report](Files/Input_File_FastQC/WTC2_1_fastqc.html)<br>
-- [WTC2_2 FastQC Report](Files/Input_File_FastQC/WTC2_2_fastqc.html)<br>
+- [WTC1_1 FastQC Report](Files/Input_FastQC/WTC1_1.fq FastQC Report.pdf)<br>
+- [WTC1_2 FastQC Report](Files/Input_FastQC/WTC1_2.fq FastQC Report.pdf)<br>
+- [WTC2_1 FastQC Report](Files/Input_FastQC/WTC2_1.fq FastQC Report.pdf)<br>
+- [WTC2_2 FastQC Report](Files/Input_FastQC/WTC2_2.fq FastQC Report.pdf)<br>
   <br>
   
   c. Trimmomatic scripts: <br>
